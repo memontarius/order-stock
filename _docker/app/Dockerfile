@@ -24,11 +24,6 @@ RUN groupmod -o -g ${PGID} www-data && \
     usermod -o -u ${PUID} -g www-data www-data
 
 RUN chown -R www-data:www-data /var/www
-RUN find /var/www -type f -exec chmod 664 {} \
-RUN find /var/www -type d -exec chmod 775 {}
-
-RUN chgrp -R www-data /var/www/storage /var/www/bootstrap/cache
-RUN chmod -R ug+rwx /var/www/storage /var/www/bootstrap/cache
 
 COPY ./_docker/app/php.ini /usr/local/etc/php/conf.d/php.ini
 
