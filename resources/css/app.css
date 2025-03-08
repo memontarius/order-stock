@@ -1,0 +1,14 @@
+@import '@fortawesome/fontawesome-free/css/fontawesome.css';
+@import '@fortawesome/fontawesome-free/css/regular.css';
+@import '@fortawesome/fontawesome-free/css/solid.css';
+@import '@fortawesome/fontawesome-free/css/brands.css';
+
+
+@import '../../public/vendor/adminlte/dist/css/adminlte.css';
+@import '../../public/vendor/icheck-bootstrap/icheck-bootstrap.css';
+@import '../../public/vendor/overlayScrollbars/css/OverlayScrollbars.css';
+
+.sidebar .nav-item .nav-link > i {
+    width: 1.6rem;
+    text-align: center;
+}

@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
       apt-utils \
       libpq-dev \
       libpng-dev \
+      libicu-dev \
       libzip-dev \
       zip unzip \
       git && \
@@ -12,8 +13,11 @@ RUN apt-get update && apt-get install -y \
       docker-php-ext-install bcmath && \
       docker-php-ext-install gd && \
       docker-php-ext-install zip && \
+      docker-php-ext-configure intl &&  \
+      docker-php-ext-install intl && \
       apt-get clean && \
       rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 
 WORKDIR /var/www
 
